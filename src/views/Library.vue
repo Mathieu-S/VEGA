@@ -1,11 +1,11 @@
 <template>
-  <section class="about">
-    <h2>This is an about page</h2>
+  <section class="library">
+    <h2>This is a library page</h2>
   </section>
 </template>
 
 <script lang="ts">
 import { Vue } from "vue-property-decorator";
 
-export default class About extends Vue {}
+export default class Library extends Vue {}
 </script>

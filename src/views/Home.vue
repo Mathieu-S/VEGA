@@ -1,5 +1,6 @@
 <template>
   <section class="home">
+    <h2>This is a home page</h2>
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
   </section>
