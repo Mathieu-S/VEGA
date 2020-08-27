@@ -1,19 +1,18 @@
 <template>
   <section class="home">
-    <h2>This is a home page</h2>
+    <h2>{{ $t("views.home.title") }}</h2>
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <HelloWorld msg="Welcome to Your Vue.js App" />
   </section>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+<script>
 import HelloWorld from "@/components/HelloWorld.vue";
 
-@Component({
+export default {
+  name: "Home",
   components: {
     HelloWorld
   }
-})
-export default class Home extends Vue {}
+};
 </script>

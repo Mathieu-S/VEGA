@@ -1,0 +1,17 @@
+{
+  "views": {
+    "home": {
+      "title": "Ceci est la page d'accueil"
+    },
+    "library": {
+      "title": "Ceci est la page de librairie"
+    },
+    "configuration": {
+      "title": "Ceci est la page de configuration"
+    },
+    "about": {
+      "title": "Ceci est la page d'à-propos"
+    }
+  },
+  "components": {}
+}

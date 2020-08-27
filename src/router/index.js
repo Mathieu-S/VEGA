@@ -1,5 +1,6 @@
 import Vue from "vue";
-import VueRouter, { RouteConfig } from "vue-router";
+import VueRouter from "vue-router";
+
 import Home from "@/views/Home.vue";
 import Library from "@/views/Library.vue";
 import Configuration from "@/views/Configuration.vue";
@@ -7,7 +8,7 @@ import About from "@/views/About.vue";
 
 Vue.use(VueRouter);
 
-const routes: Array<RouteConfig> = [
+const routes = [
   {
     path: "/",
     name: "Home",
