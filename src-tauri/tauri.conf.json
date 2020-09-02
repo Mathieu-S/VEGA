@@ -1,4 +1,10 @@
 {
+  "build": {
+    "distDir": "../dist",
+    "devPath": "http://localhost:8080",
+    "beforeDevCommand": "npm run serve",
+    "beforeBuildCommand": "npm run build"
+  },
   "ctx": {},
   "tauri": {
     "embeddedServer": {

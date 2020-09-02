@@ -1,0 +1,17 @@
+{
+  "views": {
+    "home": {
+      "title": "This is a home page"
+    },
+    "library": {
+      "title": "This is a library page"
+    },
+    "configuration": {
+      "title": "This is a configuration page"
+    },
+    "about": {
+      "title": "This is an about page"
+    }
+  },
+  "components": {}
+}

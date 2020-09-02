@@ -1,32 +1,39 @@
 <template>
-  <div id="app">
-    <div id="nav">
+  <main id="app">
+    <header>
+      <h1>VEGA</h1>
+    </header>
+
+    <nav>
       <router-link to="/">Home</router-link> |
+      <router-link to="/library">Library</router-link> |
+      <router-link to="/configuration">Configuration</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
+    </nav>
+
     <router-view />
-  </div>
+
+    <footer>Version Alpha 0.1.0</footer>
+  </main>
 </template>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 
-#nav {
-  padding: 30px;
+  header {
+    text-align: center;
+  }
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  nav {
+    text-align: center;
+  }
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  footer {
+    text-align: end;
   }
 }
 </style>
