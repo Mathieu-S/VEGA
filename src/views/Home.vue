@@ -1,18 +1,26 @@
 <template>
   <section class="home">
     <h2>{{ $t("views.home.title") }}</h2>
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+
+    <ModPack name="A modpack" />
+
+    <button @click="startDoom">Launch DOOM</button>
   </section>
 </template>
 
 <script>
-import HelloWorld from "@/components/HelloWorld.vue";
+import { execute } from "tauri/api/process";
+import ModPack from "@/components/ModPack.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    ModPack
+  },
+  methods: {
+    async startDoom() {
+      await execute("C:/Windows/System32/notepad", []);
+    }
   }
 };
 </script>
