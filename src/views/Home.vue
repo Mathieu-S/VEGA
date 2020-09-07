@@ -4,11 +4,12 @@
 
     <ModPack name="A modpack" />
 
-    <button @click="startDoom">Launch DOOM</button>
+    <button :disabled="!isPlayable" @click="startDoom">Launch DOOM</button>
   </section>
 </template>
 
 <script>
+import { mapState } from "vuex";
 import { execute } from "tauri/api/process";
 import ModPack from "@/components/ModPack.vue";
 
@@ -17,9 +18,15 @@ export default {
   components: {
     ModPack
   },
+  computed: {
+    ...mapState({ doomEnginePath: state => state.settings.doomEnginePath }),
+    isPlayable() {
+      return this.doomEnginePath.length !== 0;
+    }
+  },
   methods: {
     async startDoom() {
-      await execute("C:/Windows/System32/notepad", []);
+      await execute(this.doomEnginePath, []);
     }
   }
 };
