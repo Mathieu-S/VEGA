@@ -32,8 +32,12 @@
     text-align: center;
   }
 
+  .container {
+    margin: 0 10%;
+  }
+
   footer {
-    text-align: end;
+    text-align: right;
   }
 }
 </style>

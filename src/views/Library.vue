@@ -1,5 +1,5 @@
 <template>
-  <section class="library">
+  <section class="library container">
     <h2>{{ $t("views.library.title") }}</h2>
 
     <table>
