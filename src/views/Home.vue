@@ -1,5 +1,5 @@
 <template>
-  <section class="home">
+  <section class="home container">
     <h2>{{ $t("views.home.title") }}</h2>
 
     <ModPack name="A modpack" />

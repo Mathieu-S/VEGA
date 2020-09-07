@@ -1,5 +1,5 @@
 <template>
-  <section class="configuration">
+  <section class="configuration container">
     <h2>{{ $t("views.configuration.title") }}</h2>
 
     <form @submit.prevent>
