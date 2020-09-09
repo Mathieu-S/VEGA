@@ -14,7 +14,6 @@ export default {
   },
   actions: {
     setPath({ commit }, config) {
-      console.log(config.path, config.type);
       switch (config.type) {
         case "doomEnginePath":
           commit("setDoomEnginePath", config.path);

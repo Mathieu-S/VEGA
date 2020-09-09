@@ -4,7 +4,7 @@
 
     <section class="mods-list-panel">
       <ModsList :mods="mods" />
-      <aside class="actions">
+      <aside class="filters">
         <form @submit.prevent>
           <label for="search-mod">Search</label>
           <input id="search-mod" type="text" />
@@ -49,10 +49,10 @@ export default {
     ...mapState({ modsFolderPath: state => state.settings.modsFolderPath })
   },
   async mounted() {
-    if (this.modsFolderPath !== 0) {
+    if (this.modsFolderPath.length !== 0) {
       this.mods = await readDir(this.modsFolderPath);
     } else {
-      this.mods = []
+      this.mods = [];
     }
   }
 };
@@ -62,11 +62,19 @@ export default {
 .library {
   .mods-list-panel {
     display: flex;
+    justify-content: space-between;
 
-    .actions {
-      margin-left: 10px;
+    .mods-list {
+      max-width: 60%;
+    }
+
+    .filters {
+      width: 20%;
       display: flex;
       flex-direction: column;
+
+      #search-mod {
+      }
     }
   }
 }

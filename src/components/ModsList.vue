@@ -23,8 +23,7 @@
           </select>
         </td>
         <td>
-          <button>Edit</button>
-          <button>Delete</button>
+          <input type="checkbox" />
         </td>
       </tr>
     </tbody>
@@ -58,7 +57,8 @@ export default {
         return [];
       }
     }
-  }
+  },
+  methods: {}
 };
 </script>
 
