@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapGetters } from "vuex";
 import { execute } from "tauri/api/process";
 import ModPack from "@/components/ModPack.vue";
 
@@ -20,6 +20,7 @@ export default {
   },
   computed: {
     ...mapState({ doomEnginePath: state => state.settings.doomEnginePath }),
+    ...mapGetters("mods", ["activePreset"]),
     isPlayable() {
       return this.doomEnginePath.length !== 0;
     }
