@@ -3,7 +3,7 @@
     <h2>{{ $t("views.library.title") }}</h2>
 
     <section class="mods-list-panel">
-      <ModsList :mods="mods" />
+      <ModsList :mods="mods" @selected-mods="saveDefaultPreset" />
       <aside class="filters">
         <form @submit.prevent>
           <label for="search-mod">Search</label>
@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapActions, mapState } from "vuex";
 import { readDir } from "tauri/api/fs";
 import ModsList from "@/components/ModsList.vue";
 
@@ -53,6 +53,12 @@ export default {
       this.mods = await readDir(this.modsFolderPath);
     } else {
       this.mods = [];
+    }
+  },
+  methods: {
+    ...mapActions("mods", ["savePreset"]),
+    saveDefaultPreset(value) {
+      this.savePreset(value);
     }
   }
 };

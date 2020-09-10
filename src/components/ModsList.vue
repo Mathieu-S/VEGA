@@ -23,7 +23,7 @@
           </select>
         </td>
         <td>
-          <input type="checkbox" />
+          <input v-model="selectedMods" type="checkbox" :value="mod.name" />
         </td>
       </tr>
     </tbody>
@@ -58,7 +58,16 @@ export default {
       }
     }
   },
-  methods: {}
+  data() {
+    return {
+      selectedMods: []
+    };
+  },
+  watch: {
+    selectedMods() {
+      this.$emit("selected-mods", this.selectedMods);
+    }
+  }
 };
 </script>
 
